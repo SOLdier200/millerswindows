@@ -47,6 +47,9 @@ const stats = [
   { value: "Local", label: "Sacramento service" },
 ];
 
+const phoneNumber = "279-283-5795";
+const phoneHref = "tel:2792835795";
+
 export default function Home() {
   return (
     <main className="relative overflow-hidden">
@@ -54,18 +57,23 @@ export default function Home() {
 
       <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-16 px-6 py-6 sm:px-10 lg:px-12">
         <header className="flex items-center justify-between rounded-full border border-white/70 bg-white/70 px-5 py-3 shadow-[0_10px_40px_rgba(29,46,62,0.08)] backdrop-blur">
-          <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-slate-500">
-              Miller&apos;s Windows
-            </p>
-            <p className="text-sm text-slate-700">Sacramento window cleaning</p>
+          <div className="flex items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-sm font-semibold tracking-[0.3em] text-white shadow-lg shadow-slate-950/20">
+              MC
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-[0.35em] text-slate-500">
+                Miller&apos;s Windows
+              </p>
+              <p className="text-sm text-slate-700">Sacramento window cleaning</p>
+            </div>
           </div>
 
           <a
-            href="tel:5555555555"
+            href={phoneHref}
             className="rounded-full bg-slate-950 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800"
           >
-            Call for a quote
+            {phoneNumber}
           </a>
         </header>
 
@@ -87,7 +95,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
-                href="tel:5555555555"
+                href={phoneHref}
                 className="inline-flex items-center justify-center rounded-full bg-sky-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-sky-200 transition hover:bg-sky-500"
               >
                 Call For A Free Estimate
@@ -180,12 +188,10 @@ export default function Home() {
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-700">
               Services
             </p>
-            <h2 className="mt-3 text-3xl font-semibold text-slate-950">
-              Enough detail to feel like a real company
-            </h2>
+            <h2 className="mt-3 text-3xl font-semibold text-slate-950">What we clean</h2>
             <p className="mt-4 text-slate-600">
-              The page now shows the kinds of jobs customers expect to see, plus a stronger
-              visual treatment for the windows themselves.
+              Residential and commercial service across Sacramento, with careful attention
+              to glass, frames, tracks, and screens.
             </p>
           </div>
 
